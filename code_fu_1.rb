@@ -1,5 +1,5 @@
 # Print the second highest element within a list of numbers input from the command line
-
+#
 # 1 0 1 -4 0 -1 2 3 5 -5 -7 8 1 => '5'
 # 5 3 2 8 9 1 12 => '9'
 
@@ -14,13 +14,12 @@ def sort(numbers)
     end
     numbers[i+1] = highest
   end
-  numbers = numbers.uniq && numbers.reverse
-  index = numbers.each_index.select{|i| numbers[i] >= 0}
-  value = index[1]
+  numbers = numbers.uniq
+  numbers = numbers.reverse
   if numbers.length < 2
     puts "First highest number is #{numbers[0]}!"
   else
-    puts "Second highest number is #{numbers[value]}"
+    puts "Second highest number is #{numbers[1]}"
   end
 end
 
