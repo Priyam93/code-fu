@@ -16,7 +16,7 @@ if (req_word - word).empty? && (count.include?'o') && (count.include?'t')
   for i in 0..(word.length-1)
     if word[i]=='a' || word[i]=='u' || word[i]=='t' || word[i]=='o' || word[i]=='b'
       my << word[i]
-      if (my.include?'a')&&(my.include?'u')&&(my.include?'t')&&(my.include?'o')&&(my.include?'b')&&(my.include?'t')&&(my.count('t')>=2 )&&(my.count('o')>=2)
+      if (my.include?'a')&&(my.include?'u')&&(my.include?'t')&&(my.include?'o')&&(my.include?'b')&&(my.count('t')>=2 )&&(my.count('o')>=2)
         puts "AUTOBOT found! Index for #{word[i]} is #{i}"
         break
       end
